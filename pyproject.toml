@@ -23,4 +23,4 @@ line-length = 100
 target-version = "py311"
 
 [tool.ruff.lint.per-file-ignores]
-"src/p300erp/run.py" = ["E402"]
+"src/p300erp/figure.py" = ["E402"]
