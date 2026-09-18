@@ -1,0 +1,94 @@
+14:10:59 33600 trials | 8 ch x 103 samples @ 128 Hz | 8 subjects | target fraction 0.167
+14:11:01 [xdawn_lda] within-subject S01 AUC 0.822
+14:11:02 [xdawn_lda] within-subject S02 AUC 0.788
+14:11:04 [xdawn_lda] within-subject S03 AUC 0.889
+14:11:05 [xdawn_lda] within-subject S04 AUC 0.803
+14:11:06 [xdawn_lda] within-subject S05 AUC 0.847
+14:11:07 [xdawn_lda] within-subject S06 AUC 0.863
+14:11:08 [xdawn_lda] within-subject S07 AUC 0.846
+14:11:09 [xdawn_lda] within-subject S08 AUC 0.942
+14:11:09 == xdawn_lda within_subject: mean per-subject AUC 0.850 ± 0.049
+14:11:11 [xdawn_lda] leave-one-subject-out S01 AUC 0.755
+14:11:12 [xdawn_lda] leave-one-subject-out S02 AUC 0.728
+14:11:14 [xdawn_lda] leave-one-subject-out S03 AUC 0.849
+14:11:15 [xdawn_lda] leave-one-subject-out S04 AUC 0.702
+14:11:16 [xdawn_lda] leave-one-subject-out S05 AUC 0.725
+14:11:17 [xdawn_lda] leave-one-subject-out S06 AUC 0.758
+14:11:19 [xdawn_lda] leave-one-subject-out S07 AUC 0.768
+14:11:20 [xdawn_lda] leave-one-subject-out S08 AUC 0.830
+14:11:20 == xdawn_lda cross_subject: mean per-subject AUC 0.764 ± 0.051
+14:11:35 [riemann] within-subject S01 AUC 0.839
+14:11:49 [riemann] within-subject S02 AUC 0.807
+14:12:05 [riemann] within-subject S03 AUC 0.893
+14:12:20 [riemann] within-subject S04 AUC 0.804
+14:12:35 [riemann] within-subject S05 AUC 0.864
+14:12:48 [riemann] within-subject S06 AUC 0.867
+14:13:00 [riemann] within-subject S07 AUC 0.855
+14:13:12 [riemann] within-subject S08 AUC 0.943
+14:13:12 == riemann within_subject: mean per-subject AUC 0.859 ± 0.045
+14:13:32 [riemann] leave-one-subject-out S01 AUC 0.772
+14:13:52 [riemann] leave-one-subject-out S02 AUC 0.727
+14:14:11 [riemann] leave-one-subject-out S03 AUC 0.841
+14:14:31 [riemann] leave-one-subject-out S04 AUC 0.762
+14:14:50 [riemann] leave-one-subject-out S05 AUC 0.790
+14:15:10 [riemann] leave-one-subject-out S06 AUC 0.760
+14:15:30 [riemann] leave-one-subject-out S07 AUC 0.782
+14:15:52 [riemann] leave-one-subject-out S08 AUC 0.815
+14:15:52 == riemann cross_subject: mean per-subject AUC 0.781 ± 0.035
+14:17:27 [eegnet] within-subject S01 AUC 0.814
+14:18:47 [eegnet] within-subject S02 AUC 0.822
+14:20:06 [eegnet] within-subject S03 AUC 0.867
+14:21:18 [eegnet] within-subject S04 AUC 0.815
+14:22:31 [eegnet] within-subject S05 AUC 0.847
+14:23:44 [eegnet] within-subject S06 AUC 0.872
+14:24:57 [eegnet] within-subject S07 AUC 0.869
+14:26:10 [eegnet] within-subject S08 AUC 0.944
+14:26:10 == eegnet within_subject: mean per-subject AUC 0.856 ± 0.043
+14:28:20 [eegnet] leave-one-subject-out S01 AUC 0.772
+14:30:31 [eegnet] leave-one-subject-out S02 AUC 0.761
+14:32:43 [eegnet] leave-one-subject-out S03 AUC 0.839
+14:34:54 [eegnet] leave-one-subject-out S04 AUC 0.760
+14:37:04 [eegnet] leave-one-subject-out S05 AUC 0.800
+14:39:16 [eegnet] leave-one-subject-out S06 AUC 0.795
+14:41:26 [eegnet] leave-one-subject-out S07 AUC 0.805
+14:43:39 [eegnet] leave-one-subject-out S08 AUC 0.847
+14:43:39 == eegnet cross_subject: mean per-subject AUC 0.797 ± 0.033
+{
+  "xdawn_lda/within_subject": {
+    "per_subject_mean_auc": 0.8500602040816325,
+    "per_subject_sd_auc": 0.04941266054486172,
+    "per_subject_mean_ap": 0.6010790438549175,
+    "pooled_auc": 0.8552023596938776
+  },
+  "xdawn_lda/cross_subject": {
+    "per_subject_mean_auc": 0.7643139795918368,
+    "per_subject_sd_auc": 0.051266344311668315,
+    "per_subject_mean_ap": 0.4044594405971187,
+    "pooled_auc": 0.7587530357142858
+  },
+  "riemann/within_subject": {
+    "per_subject_mean_auc": 0.8590483673469388,
+    "per_subject_sd_auc": 0.045426393226785766,
+    "per_subject_mean_ap": 0.6195017563263898,
+    "pooled_auc": 0.8637995918367347
+  },
+  "riemann/cross_subject": {
+    "per_subject_mean_auc": 0.7811529081632653,
+    "per_subject_sd_auc": 0.0349969155484967,
+    "per_subject_mean_ap": 0.44041830897075573,
+    "pooled_auc": 0.7810292474489796
+  },
+  "eegnet/within_subject": {
+    "per_subject_mean_auc": 0.8561655102040816,
+    "per_subject_sd_auc": 0.0429137846150848,
+    "per_subject_mean_ap": 0.6104169195002491,
+    "pooled_auc": 0.8598727040816326
+  },
+  "eegnet/cross_subject": {
+    "per_subject_mean_auc": 0.7973100510204082,
+    "per_subject_sd_auc": 0.03295115803608372,
+    "per_subject_mean_ap": 0.4685438290185142,
+    "pooled_auc": 0.7932783737244898
+  },
+  "seconds": 1959.8
+}

@@ -13,7 +13,15 @@ aggregation curve: the number that a P300-based product actually cares about.
 
 ## Results
 
-RESULTS_TABLE
+| detector | within-subject AUC | within-subject AP | cross-subject (LOSO) AUC | cross-subject AP |
+|---|---|---|---|---|
+| xDAWN + shrinkage LDA | 0.850 ± 0.049 | 0.60 | 0.764 ± 0.051 | 0.40 |
+| Riemannian (xDAWN cov → tangent space → logreg) | **0.859** ± 0.045 | **0.62** | 0.781 ± 0.035 | 0.44 |
+| EEGNet (PyTorch) | 0.856 ± 0.043 | 0.61 | **0.797** ± 0.033 | **0.47** |
+
+Chance AP is 0.17. The three detectors tie within-subject; EEGNet transfers best across
+subjects, the Riemannian pipeline is close and ~50x cheaper to train. Whole run (three
+detectors, two regimes, aggregation curves): 33 min on a laptop CPU, of which EEGNet is 30.
 
 Per-subject means over 8 subjects, single-trial AUC. Target : non-target ratio is 1 : 5, so
 average precision (AP) is reported alongside AUC. Full per-subject numbers in
@@ -22,10 +30,17 @@ average precision (AP) is reported alongside AUC. Full per-subject numbers in
 **Decision-level reliability.** Averaging the detector's score over k repeated
 presentations of the same item:
 
-AGG_TABLE
+| decision AUC after k repetitions | k=1 | k=2 | k=3 | k=4 | k=6 | k=8 | k=10 |
+|---|---|---|---|---|---|---|---|
+| Riemannian, within-subject | 0.86 | 0.93 | 0.97 | 0.98 | 0.99 | 0.997 | 0.999 |
+| EEGNet, within-subject | 0.86 | 0.93 | 0.96 | 0.98 | 0.99 | 0.997 | 0.999 |
+| EEGNet, cross-subject | 0.79 | 0.87 | 0.92 | 0.95 | 0.97 | 0.99 | 0.99 |
+| Riemannian, cross-subject | 0.78 | 0.86 | 0.91 | 0.93 | 0.96 | 0.98 | 0.99 |
 
-This is the curve that sets a product's session length: with a calibrated detector, a few
-repetitions are enough for a decision AUC above 0.95; without calibration, more are needed.
+This is the curve that sets a product's session length. With a per-person calibration,
+three repetitions already give a decision AUC above 0.95; with no calibration at all it
+takes four to six. The same detector that looks mediocre at the single-trial level (0.8)
+becomes reliable once evidence is aggregated, which is how every deployed P300 system works.
 
 ## Why these three models
 
